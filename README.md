@@ -28,6 +28,7 @@ Unity Projesinin Oluşturulması
 •	Unity'de yeni bir 3D proje oluşturun.
 
 •	Proje klasörünüzde Assets altında yeni bir klasör oluşturun ve ismini LabirentProjesi olarak belirleyin.
+
 Başlangıç Paketi Entegrasyonu
 
 •	Verilen AStarStarter paketini projenize dahil edin.
