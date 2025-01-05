@@ -7,34 +7,34 @@ A Algoritmasının Temelleri
 
 A* algoritması, en kısa yolu bulmak için kullanılan sezgisel bir arama algoritmasıdır. Toplam maliyet fonksiyonu f(n)=g(n)+h(n)f(n) = g(n) + h(n)f(n)=g(n)+h(n) şu şekilde tanımlanır:
 
-	g(n)g(n)g(n): Başlangıç noktasından mevcut düğüme kadar olan maliyet.
+•	g(n)g(n)g(n): Başlangıç noktasından mevcut düğüme kadar olan maliyet.
 
-	h(n)h(n)h(n): Mevcut düğümden hedefe tahmini maliyet (heuristik).
+•	h(n)h(n)h(n): Mevcut düğümden hedefe tahmini maliyet (heuristik).
 
 A* algoritması, hem kesinlikle doğru hem de verimli bir sonuç sunmak için kullanılan güçlü bir tekniktir.
 
 Projenin Hedefleri
 
-	Rastgele bir labirent oluşturmak.
+•	Rastgele bir labirent oluşturmak.
 
-	A* algoritmasını kullanarak labirentin başlangıç ve hedef noktası arasında bir yol bulmak.
+•	A* algoritmasını kullanarak labirentin başlangıç ve hedef noktası arasında bir yol bulmak.
 
-	Süreci ve algoritmanın çalışma adımlarını görselleştirmek.
+•	Süreci ve algoritmanın çalışma adımlarını görselleştirmek.
 
 # GEREKLI KURULUM VE AYARLAR
 
 Unity Projesinin Oluşturulması
 
-	Unity'de yeni bir 3D proje oluşturun.
+•	Unity'de yeni bir 3D proje oluşturun.
 
-	Proje klasörünüzde Assets altında yeni bir klasör oluşturun ve ismini LabirentProjesi olarak belirleyin.
+•	Proje klasörünüzde Assets altında yeni bir klasör oluşturun ve ismini LabirentProjesi olarak belirleyin.
 Başlangıç Paketi Entegrasyonu
 
-	Verilen AStarStarter paketini projenize dahil edin.
+•	Verilen AStarStarter paketini projenize dahil edin.
 
-	Scenes klasöründen AStarPath sahnesini açın.
+•	Scenes klasöründen AStarPath sahnesini açın.
 
-	Play butonuna basarak labirentin rastgele oluşturulduğunu doğrulayın.
+•	Play butonuna basarak labirentin rastgele oluşturulduğunu doğrulayın.
 
 Not: Unity versiyonunuzun en az 2020.3 LTS veya daha yeni bir sürüm olmasına dikkat edin.
 
@@ -44,11 +44,11 @@ FindPathAStar Script’inin Oluşturulması
 
 Projenin temel bileşenlerinden biri olan FindPathAStar script’i, A* algoritmasının uygulanmasını sağlar. Bu script içinde:
 
-	Açık ve Kapalı Listeler: Açık liste, değerlendirilecek düğümleri; kapalı liste ise değerlendirilmiş düğümleri tutar.
+•	Açık ve Kapalı Listeler: Açık liste, değerlendirilecek düğümleri; kapalı liste ise değerlendirilmiş düğümleri tutar.
 
-	Başlangıç ve Hedef Tanımı: Başlangıç ve hedef noktaları rastgele seçilir.
+•	Başlangıç ve Hedef Tanımı: Başlangıç ve hedef noktaları rastgele seçilir.
 
-	Yol Bulma Fonksiyonu: Algoritmanın her adımda en düşük maliyetli düğümü seçerek ilerlemesi sağlanır.
+•	Yol Bulma Fonksiyonu: Algoritmanın her adımda en düşük maliyetli düğümü seçerek ilerlemesi sağlanır.
 
 PathMarker Sınıfının Tanımı
 
@@ -58,41 +58,41 @@ Arama Fonksiyonlarının Implementasyonu
 
 BeginSearch fonksiyonu:
 
-	Başlangıç ve hedef noktalarını rastgele seçer.
+•	Başlangıç ve hedef noktalarını rastgele seçer.
 
-	Açık ve kapalı listeleri temizler.
+•	Açık ve kapalı listeleri temizler.
 
 Search fonksiyonu:
 
-	Açık listedeki en düşük maliyetli düğümü seçerek komşu düğümleri değerlendirir.
+•	Açık listedeki en düşük maliyetli düğümü seçerek komşu düğümleri değerlendirir.
 
-	Hedef düğüm bulunduğunda aramayı durdurur.
+•	Hedef düğüm bulunduğunda aramayı durdurur.
 
 GetPath fonksiyonu:
 
-	Son düğümden başlangıç düğümüne doğru ebeveyn bağlantıları takip ederek yolu işaretler.
+•	Son düğümden başlangıç düğümüne doğru ebeveyn bağlantıları takip ederek yolu işaretler.
 
 # TEST VE ÇALISTIRMA
 
 Labirent Oluşturulması
 
-	Sahnedeki Maze nesnesini seçin.
+•	Sahnedeki Maze nesnesini seçin.
 
-	Recursive script’i altında width ve depth değerlerini 10 olarak ayarlayın.
+•	Recursive script’i altında width ve depth değerlerini 10 olarak ayarlayın.
 
-	Play butonuna basarak rastgele bir labirent oluşturun.
+•	Play butonuna basarak rastgele bir labirent oluşturun.
 
 Başlangıç ve Hedef Noktalarının Seçimi
 
-	P tuşuna basarak başlangıç ve hedef noktalarını oluşturun.
+•	P tuşuna basarak başlangıç ve hedef noktalarını oluşturun.
 
-	Seçilen noktaların görsel olarak işaretlendiğini doğrulayın.
+•	Seçilen noktaların görsel olarak işaretlendiğini doğrulayın.
 
 A Algoritmasının Çalıştırılması
 
-	C tuşuna basarak algoritmayı adım adım çalıştırın.
+•	C tuşuna basarak algoritmayı adım adım çalıştırın.
 
-	Hedefe ulaşıldığında, M tuşuna basarak bulunan yolu görselleştirin.
+•	Hedefe ulaşıldığında, M tuşuna basarak bulunan yolu görselleştirin.
 
 # SONUÇ VE ÇALISTIRILMIS HALI
 
